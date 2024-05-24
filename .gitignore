@@ -93,3 +93,7 @@ typings/
 public/
 *.xdv
 *.synctex.gz
+
+*.aux
+*fdb_latexmk
+*.fls
