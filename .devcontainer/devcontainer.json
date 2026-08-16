@@ -1,0 +1,14 @@
+{
+    "name": "ashwinGokhale.github.io",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "James-Yu.latex-workshop"
+            ]
+        }
+    }
+}

@@ -3,8 +3,6 @@
     \usepackage{amsmath}
     \usepackage{amssymb}
     \usepackage{textcomp}
-    \usepackage[utf8]{inputenc}
-    \usepackage[T1]{fontenc}
     \usepackage[dvipsnames]{xcolor}
     \usepackage{latexsym}
     \usepackage[empty]{fullpage}
@@ -15,7 +13,15 @@
     \usepackage[bottom=0em,top=0em,left=0.75in,right=0.5in]{geometry}
     \usepackage{anyfontsize}
     \usepackage{fontspec}
-    \setmainfont[Scale=1.05]{Helvetica Neue}
+    \IfFontExistsTF{Helvetica Neue}
+        {\setmainfont[
+            Scale=1.05,
+            FontFace={m}{sc}{Font=Helvetica Neue}
+        ]{Helvetica Neue}}
+        {\setmainfont[
+            Scale=1.05,
+            FontFace={m}{sc}{Font=Latin Modern Sans}
+        ]{Latin Modern Sans}}
     
 \pagestyle{plain}
 \raggedright
