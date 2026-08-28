@@ -1,50 +1,46 @@
 \documentclass[letterpaper, 10pt]{article}
-    \usepackage{bookmark}
-    \usepackage{amsmath}
-    \usepackage{amssymb}
-    \usepackage{textcomp}
-    \usepackage[dvipsnames]{xcolor}
-    \usepackage{latexsym}
-    \usepackage[empty]{fullpage}
-    \usepackage{titlesec}
-    \usepackage{verbatim}
-    \usepackage{enumitem}
-    \usepackage{hyperref}
-    \usepackage[bottom=0em,top=0em,left=0.75in,right=0.5in]{geometry}
-    \usepackage{anyfontsize}
-    \usepackage{fontspec}
-    \IfFontExistsTF{Helvetica Neue}
-        {\setmainfont[
-            Scale=1.05,
-            FontFace={m}{sc}{Font=Helvetica Neue}
-        ]{Helvetica Neue}}
-        {\setmainfont[
-            Scale=1.05,
-            FontFace={m}{sc}{Font=Latin Modern Sans}
-        ]{Latin Modern Sans}}
-    
-\pagestyle{plain}
-\raggedright
+
+\usepackage[empty]{fullpage}
+\usepackage[bottom=0em,top=0em,left=0.75in,right=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage{hyperref}
+\usepackage{needspace}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\setmainfont[
+    Path=fonts/,
+    UprightFont=HelveticaNeueRoman.otf,
+    ItalicFont=HelveticaNeueItalic.ttf,
+    BoldFont=HelveticaNeueHeavy.otf,
+    BoldItalicFont=HelveticaNeueHeavyItalic.otf,
+    FontFace={m}{sc}{Font=HelveticaNeueRoman.otf},
+    Scale=1.05
+]{HelveticaNeueRoman.otf}
 
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=[RGB]{5,99,193},
+    pdfauthor={Ashwin Gokhale},
+    pdftitle={Ashwin Gokhale Resume}
 }
- 
+
+\pagestyle{plain}
+\setlength{\parindent}{0pt}
+\raggedright
 \urlstyle{same}
 
-\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+\setlist[itemize]{itemsep=1pt}
 
-% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\lineunder} {
+\newcommand{\lineunder}{
     \vspace*{-8pt} \\
     \hspace*{-18pt} \hrulefill \\
 }
 
-\newcommand{\header} [1] {
+\newcommand{\header}[1]{
     {
         \hspace*{-18pt}\vspace*{6pt}
         {\large\textsc{#1}}
@@ -52,120 +48,111 @@
     \vspace*{-6pt} \lineunder
 }
 
-\newcommand{\contact} [2] {
+\newcommand{\contact}[2]{
     \vspace*{-10pt}
     \begin{center}
-        {\Huge#1}
+        {\Huge #1}
         \vspace*{5pt}
-        \\ 
+        \\
         #2
     \end{center}
     \vspace*{-10pt}
 }
-% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\company}[2]{
+    \textbf{#1}\hfill #2\\[-1pt]
+}
+
+\newcommand{\role}[2]{
+    \textit{#1}\hfill \textit{#2}\\[-2pt]
+}
+
+\newcommand{\experience}[4]{
+    \Needspace{5\baselineskip}
+    \textbf{#1}\hfill #2\\[-1pt]
+    \textit{#3}\hfill \textit{#4}\\[-2pt]
+}
 
 \begin{document}
 
-
 \vspace*{20pt}
-%==== Profile ====%
-
 \vspace*{-10pt}
-\contact{Ashwin Gokhale}
-{
-    \href{mailto:ashwin.gokhale98@gmail.com}{ashwin.gokhale98@gmail.com} |
-    $\cdot$ | (925)-548-6767 | $\cdot$ |
-    \textbf{GitHub:}
-    \href{https://goo.gl/R79aeK}{ashwinGokhale}
+\contact{Ashwin Gokhale}{
+    {\large Senior Full-Stack Software Engineer $\vert$ Backend, Cloud \& Platform Engineering}\\[4pt]
+    New York City $\vert$ Remote $\vert$
+    \href{tel:+19255486767}{925-548-6767} $\vert$
+    \href{mailto:ashwin.gokhale98@gmail.com}{ashwin.gokhale98@gmail.com} $\vert$
+    \href{https://www.linkedin.com/in/ashwin-gokhale/}{LinkedIn}
 }
 
-%==== Education ====%
-\vspace{10pt}
+\header{Summary}
+\begin{itemize}
+    \item Senior full-stack engineer with 6+ years at Microsoft and 6 years of production C\#/.NET experience, targeting backend and distributed-systems roles; built services and web platforms handling 2M requests/day.
+    \item Architected cloud, deployment, and observability platforms used by 100+ Azure teams; increased deployment cadence from 1/week to 1/hour and reduced feature validation from 7 days to 30 minutes.
+\end{itemize}
+
+\header{Technical Skills}
+\textbf{Languages:} C\#/.NET (6 years), TypeScript/Node.js (4 years), SQL/KQL (4 years), Java, Python\\
+\textbf{Cloud \& Backend:} Azure, ASP.NET Core, .NET Framework, Cosmos DB, Azure Data Explorer (Kusto), Redis, Kafka, Docker, MySQL\\
+\textbf{Architecture \& Delivery:} Distributed systems, microservices, REST APIs, CI/CD, telemetry, monorepos, microfrontends\\
+\textbf{Frontend \& Testing:} React, AngularJS, Nx, Module Federation, Playwright, Cypress, Jest, Fluent UI
+
+\header{Professional Experience}
+\company{Microsoft -- Azure Incident Management Platform}{Redmond, WA / Remote}
+\role{Senior Software Engineer}{March 2025 -- Present}
+\begin{itemize}
+    \item Re-architected a coupled frontend/backend release model into a runtime-composed platform for 16 independently deployed React applications in an Nx monorepo. Designed active-active hosting on Azure Front Door and Blob Storage with immutable versioning, staged rollouts, rollback safeguards, and runtime failover across Azure-only, sovereign, and isolated cloud environments, increasing deployment frequency from 1/week to 1/hour.
+    \item Built Node.js deployment tooling with URL-shareable version overrides for loading local or pipeline builds against production authentication and data. Reduced validation from 7 days to 30 minutes for 100+ engineers across 7 teams while supporting an ASP.NET host serving 2M requests/day.
+    \item Led architecture and delivery of a self-service telemetry platform adopted by 100+ teams across Azure. Standardized backward-compatible, type-safe instrumentation, reduced onboarding to 10 lines of code, and enabled Azure Data Explorer analysis used daily by senior leaders and engineering stakeholders.
+    % PLACEHOLDER METRIC: quantify teams that used the decision tree or engineering time avoided.
+    \item Led a technical evaluation of the Azure Portal framework, building a prototype and defining a conditional adoption strategy based on product architecture and integration constraints. Translated the findings into an Azure-wide decision tree for an engineering organization of 75,000 engineers.
+    \item Re-architected CI and test infrastructure for a monorepo used by 100+ engineers, cutting pull-request pipelines by 63\% (120 to 45 minutes), container startup by 87\%, and test execution by 66\%, saving 450 engineer-minutes/week.
+    % PLACEHOLDER METRIC: quantify code deleted, maintenance hours eliminated, or incidents reduced.
+    \item Retired 30\% of the legacy page surface and the outage application, leading cross-team Angular-to-React migrations and mentoring engineers on shared architecture, code quality, and modern React patterns.
+\end{itemize}
+
+\newpage
+\company{Microsoft -- Azure Incident Management Platform (continued)}{Redmond, WA / Remote}
+\role{Software Engineer II}{March 2021 -- March 2025}
+\begin{itemize}
+    \item Led and mentored a 5-engineer team through modernization of the product's most-used page (65K DAU, 600K page views/day) from AngularJS to React, reducing load time by 73\% and runtime errors by 27\% while increasing customer satisfaction by 96\%.
+    \item Designed and shipped the product's first standalone ASP.NET Core service for post-incident reviews, defining RESTful CRUD APIs and separating review workflows from incident and root-cause domains. Rebuilt authentication from the .NET Framework implementation and established an architectural path for future services.
+    \item Delivered the frontend for an AI copilot from inception to private preview in 2 months. Coordinated changes spanning every portal page across 6 teams in 4 organizations with no reported regressions during rollout.
+    \item Directed the migration of 418 end-to-end tests across 11 applications and 5 teams from Cypress to Playwright within one milestone, achieving a 7x speedup and adding automated accessibility checks to every application.
+    \item Built single-command generators and layered-architecture guardrails adopted by 6 libraries across 9 React apps, saving 8 setup hours/library. Created training and documentation that onboarded 3 scrum teams, enabling developers to contribute within 1--2 days.
+    \item Designed Azure AD/JWT authentication using an internal single sign-on token exchange for a Microsoft Teams integration, eliminating an entire proxy service and enabling direct access to REST/OData APIs from the Teams application.
+\end{itemize}
+
+\role{Software Engineer I}{February 2020 -- March 2021}
+\begin{itemize}
+    \item Built the incident platform's first React microfrontend and reusable React/TypeScript infrastructure, establishing a reproducible model for independently deployed applications alongside the legacy AngularJS and Angular portal.
+    \item Migrated two internal web platforms to Microsoft's standardized CI/CD system, eliminating self-managed Linux build machines and establishing faster, policy-compliant build pipelines.
+\end{itemize}
+
+\experience{Bloomberg L.P.}{New York, NY}{Software Engineer Intern}{May 2019 -- August 2019}
+\begin{itemize}
+    \item Migrated newsletter rendering from a third-party vendor to a TypeScript microfrontend container used to dynamically render client-side modules on Bloomberg.com.
+    \item Built a TypeScript, Redis, and MySQL service to deliver compiled HTML, JavaScript, and CSS templates at up to 75,000 requests per second.
+\end{itemize}
+
+\experience{JPMorgan Chase \& Co.}{Chicago, IL}{Software Engineer Intern}{June 2018 -- August 2018}
+\begin{itemize}
+    \item Architected an extensible Java and TypeScript test-automation framework for a corporate banking payment platform, automating manual release validation. Served as Scrum Master for a 4-engineer intern team.
+\end{itemize}
+
+\experience{Object Edge}{Walnut Creek, CA}{Software Engineer Intern}{May 2017 -- August 2017}
+\begin{itemize}
+    \item Engineered a Java, Kafka, Redis, and Docker customer-intent service handling 5,000 queries per second, and delivered React and GraphQL improvements that resolved 30\% of known portal defects.
+\end{itemize}
+
+\header{Additional Experience}
+\experience{Purdue University}{West Lafayette, IN}{Teaching Assistant, Software Engineering}{August 2018 -- May 2019}
+\begin{itemize}
+    \item Taught Scrum and software architecture, evaluated projects, and led weekly sessions on programming and problem-solving for undergraduate engineering teams.
+\end{itemize}
 
 \header{Education}
-\textbf{Purdue University}
-\hfill West Lafayette, IN\\
-(B.S.) Computer Science -- \textit{GPA: 3.79}
-\hfill August 2016 - December 2019
-\\
+\textbf{Purdue University}\hfill West Lafayette, IN\\[-1pt]
+Bachelor of Science in Computer Science, GPA: 3.79\hfill December 2019
 
-\textit{Relevant Courses: Data Structures \& Algorithms, Systems Programming, Operating Systems, Web Applications}
-
-\vspace{2mm}
-
-%==== Skills ====%
-\vspace{1mm}
-\header{Skills}
-\vspace{1mm}
-\begin{tabular}{ l l }
-    \textbf{Proficient:} & JavaScript, TypeScript, React.js, HTML, Java, Python, C\#, SQL Server, Nx, Azure \\
-    \textbf{Basic:}      & CSS, MySQL, Docker, Apache Kafka, GraphQL                     \\
-\end{tabular}
-\vspace{2mm}
-
-%==== Work Experience ====%
-\header{Work Experience}
-\vspace{1mm}
-
-\textbf{Microsoft} \hfill Redmond, WA / Remote\\
-\textit{Software Engineer 2} \hfill February 2020 -- Present\\
-\vspace{-1mm}
-\begin{itemize} \itemsep 1pt
-    \item Led feature development team of 5 junior engineers for rewrite of most visited page (65K DAU / 600K daily page views) from Angular.js to React, leading to 27\% less runtime errors, 73\% load time decrease, and 96\% increase in customer satisfaction score
-    \item Sole tech lead for scaling out monorepo from single legacy Angular application to 13 React microfrontend applications, owned by 9 teams (75 engineers total) using Nx and Webpack module federation
-\end{itemize}
-
-\textbf{Bloomberg L.P.} \hfill New York City, NY\\
-\textit{Software Engineer Intern} \hfill May 2019 -- August 2019\\
-\vspace{-1mm}
-\begin{itemize} \itemsep 1pt
-    \item Migrated the rendering of newsletters from 3rd party vendor to a micro frontend container in Typescript, used for dynamically rendering client-side modules on \href{https://www.bloomberg.com}{bloomberg.com}
-    \item Created a microservice using Typescript, Redis, and MySQL to serve compiled HTML, JS, and CSS templates on \href{https://www.bloomberg.com}{bloomberg.com} at scale (75,000 requests/second)
-\end{itemize}
-
-\textbf{Purdue University} \hfill West Lafayette, IN\\
-\textit{Teaching Assistant -- Software Engineering} \hfill August 2018 -- May 2019\\
-\vspace{-1mm}
-\begin{itemize} \itemsep 1pt
-    \item Taught SCRUM methodology, graded assignments, facilitated discussions, and provided feedback to improve students' programming and architecture design skills
-    \item Improved students' problem solving skills by holding weekly help sessions in a group setting
-\end{itemize}
-
-\textbf{JPMorgan Chase \& Co.} \hfill Chicago, IL\\
-\textit{Software Engineer Intern} \hfill June 2018 -- August 2018\\
-\vspace{-1mm}
-\begin{itemize} \itemsep 1pt
-    \item SCRUM Master for a team of four interns to manage the design and implementation of testing automation for a corporate banking payment platform
-    \item Architected an extensible automated testing frameworks in Java and Typescript, which prevented hours of manual testing and increased time efficiency for building and deployment
-\end{itemize}
-
-\textbf{Object Edge} \hfill Walnut Creek, CA\\
-\textit{Software Engineer Intern} \hfill May 2017 -- August 2017\\
-\vspace{-1mm}
-\begin{itemize} \itemsep 1pt
-    \item Engineered a real-time, customer intent microservice using Java, Apache Kafka, Redis, and Docker at scale (5000 queries/second) to improve product recommendations for customers
-    \item Improved quality of client's Customer Service Portal by using React JS, Graph QL, and Java to add features and resolve 30\% of bugs in code base
-\end{itemize}
-
-%==== Leadership ====%
-\header{Leadership}
-
-{\textbf{Hello World}} (\href{http://bit.ly/2YTSLfw}{http://bit.ly/2YTSLfw}) \hfill April 2017 -- September 2019\\
-\textit{User Experience Team}\\
-\vspace{-1mm}
-\begin{itemize} \itemsep 1pt
-    \item Coordinated logistical efforts, managed event scheduling, and mentored students in Web Development for Purdue's 250+ attendee Beginner-Oriented Hackathon, which incorporates incoming Freshmen into Purdue's Computer Science community
-\end{itemize}
-
-\textbf{Purdue Hackers} (\href{http://bit.ly/2Knt4zR}{http://bit.ly/2Knt4zR})
-\hfill March 2018 -- May 2019\\
-\textit{Web Master}\\
-\vspace{-1mm}
-\begin{itemize} \itemsep 1pt
-    \item Managed the development, deployment, and maintenance of the main portal for 1500+ members to use and stay connected with the Purdue Hackers organization
-\end{itemize}
-
-\vspace*{2mm}
-
-\
 \end{document}
