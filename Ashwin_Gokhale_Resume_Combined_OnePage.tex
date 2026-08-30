@@ -38,7 +38,7 @@
 \raggedright
 \urlstyle{same}
 
-\setlist[itemize]{itemsep=7pt, topsep=4pt, parsep=0pt, leftmargin=12pt}
+\setlist[itemize]{itemsep=5pt, topsep=4pt, parsep=0pt, leftmargin=12pt}
 
 \newcommand{\lineunder}{
     \vspace*{-8pt} \\
@@ -75,7 +75,9 @@
     \textit{#1}\hfill \textit{#2}\\[-2pt]
 }
 
+% Extra leading space separates this employer block from the previous one.
 \newcommand{\experience}[4]{
+    \vspace*{6pt}
     \Needspace{5\baselineskip}
     \textbf{#1}\hfill #2\\[-1pt]
     \textit{#3}\hfill \textit{#4}\\[-2pt]
@@ -92,11 +94,6 @@
 
 \header{Professional Summary}
 Senior Software Engineer with 6+ years at Microsoft, building distributed systems in C\# / .NET and TypeScript for its incident management platform. Architected its deployment, plugin, telemetry, and data ingestion platforms, and converted a legacy Angular application into an Nx monorepo of 16 React microfrontends behind an ASP.NET Framework frontend serving 2M requests/day.
-
-\header{Skills}
-\textbf{Languages \& Backend:} C\# / .NET $\vert$ ASP.NET Core $\vert$ TypeScript / Node.js $\vert$ Java $\vert$ SQL / KQL $\vert$ REST / OData\\
-\textbf{Cloud \& Data:} Cosmos DB $\vert$ Azure Data Explorer (Kusto) $\vert$ Redis $\vert$ Kafka $\vert$ Docker $\vert$ SQL Server $\vert$ MySQL\\
-\textbf{Frontend \& Testing:} React $\vert$ Angular $\vert$ Nx $\vert$ Module Federation $\vert$ Webpack $\vert$ Jest $\vert$ Playwright
 
 \header{Work Experience}
 \company{Microsoft}{Redmond, WA / Remote}
@@ -127,6 +124,11 @@ Senior Software Engineer with 6+ years at Microsoft, building distributed system
 \begin{itemize}
     \item Replaced vendor newsletter rendering on Bloomberg.com with a TypeScript microfrontend backed by a Redis and MySQL service serving compiled HTML, JavaScript, and CSS at up to 75,000 requests/second.
 \end{itemize}
+
+\header{Skills}
+\textbf{Languages \& Backend:} C\# / .NET $\vert$ ASP.NET Core $\vert$ TypeScript / Node.js $\vert$ Java $\vert$ SQL / KQL $\vert$ REST / OData\\
+\textbf{Cloud \& Data:} Cosmos DB $\vert$ Azure Data Explorer (Kusto) $\vert$ Redis $\vert$ Kafka $\vert$ Docker $\vert$ SQL Server $\vert$ MySQL\\
+\textbf{Frontend \& Testing:} React $\vert$ Angular $\vert$ Nx $\vert$ Module Federation $\vert$ Webpack $\vert$ Jest $\vert$ Playwright
 
 \header{Education}
 \textbf{Purdue University}\hfill West Lafayette, IN\\
