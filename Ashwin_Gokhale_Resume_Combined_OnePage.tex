@@ -38,7 +38,7 @@
 \raggedright
 \urlstyle{same}
 
-\setlist[itemize]{itemsep=5pt, topsep=4pt, parsep=0pt, leftmargin=12pt}
+\setlist[itemize]{itemsep=4pt, topsep=4pt, parsep=0pt, leftmargin=12pt}
 
 \newcommand{\lineunder}{
     \vspace*{-8pt} \\
@@ -46,7 +46,7 @@
 }
 
 \newcommand{\header}[1]{
-    \vspace*{12pt}
+    \vspace*{10pt}
     {
         \hspace*{-18pt}\vspace*{4pt}
         {\large\textbf{\textsc{#1}}}
@@ -66,7 +66,7 @@
 }
 
 \newcommand{\company}[2]{
-    \textbf{#1}\hfill #2\\[-1pt]
+    \textbf{#1}\hfill #2\\[0pt]
 }
 
 % Keeps a role heading from breaking away from a useful chunk of its bullets.
@@ -100,7 +100,7 @@ Senior Software Engineer with 6+ years at Microsoft, building distributed system
 \role{Senior Software Engineer}{March 2025 -- Present}
 \begin{itemize}
     \item Architected multi-region delivery for the portal's 16 React applications, composed in the browser at runtime with Module Federation, cutting test release intervals from up to 2 weeks to hourly on demand. Designed active/active Azure Front Door and Blob Storage hosting across public, sovereign, and air-gapped clouds with staged rollouts, immutable versioning, and automatic failover outside Azure during outages.
-    \item Built a telemetry platform that automatically instruments customer engagement across 50+ engineering teams. Used by 2,000+ engineers across Microsoft and daily by C-suite executives and their direct reports.
+    \item Built a telemetry platform that automatically instruments customer engagement across 50+ engineering teams, visualizing metrics in the browser beside the UI components they measure. Used by 2,000+ engineers across Microsoft and daily by C-suite executives and their direct reports.
     \item Rearchitected ingestion from Cosmos DB to Azure Data Explorer, replacing a custom 5 resource pipeline with a native Data Share integration and eliminating failure modes, on-call burden, and Azure cost.
     \item Architected a federated, sandboxed plugin platform for 6 production plugins from the Azure, Identity, and Microsoft 365 organizations, cutting partner onboarding from weeks to a 5 minute configuration change.
     \item Redesigned CI/CD for a monorepo used by 100+ engineers, using job sharding and build caching to cut build time 79\%, from 120 to 25 minutes, and weekly pipeline time from 400 to 83 hours.
