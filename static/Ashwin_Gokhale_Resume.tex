@@ -1,6 +1,4 @@
-% Merged one-page resume: combines Ashwin_Gokhale_Resume_OnePage.tex and Ashwin_Gokhale_Resume_Copilot_OnePage.tex.
-% Targeted at Senior backend/platform roles (Reddit Core Platform, Robinhood Backend, Spotify Podcast Platform, Sigma).
-% Kept at the repo root rather than static/ so this draft is not published by Gatsby.
+% One-page resume. Build with XeLaTeX (fontspec). Published verbatim from static/ by Gatsby.
 \documentclass[letterpaper, 10pt]{article}
 
 \usepackage[empty]{fullpage}
@@ -93,26 +91,26 @@
 }
 
 \header{Professional Summary}
-Senior Software Engineer with 6+ years of experience building distributed systems in C\#/.NET and TypeScript. Architected the deployment, plugin, and ingestion infrastructure behind Microsoft's incident management platform, driving migrations across 100+ engineers and 4 organizations from design through rollout.
+Senior Software Engineer with 6+ years of experience building distributed systems in C\#/.NET and TypeScript. Architected the deployment, plugin, telemetry, and ingestion infrastructure for Microsoft's incident management platform, driving migrations for 100+ engineers across 4 organizations from design to rollout.
 
 \header{Work Experience}
 \company{Microsoft}{Redmond, WA/Remote}
 \role{Senior Software Engineer}{March 2025 -- Present}
 \begin{itemize}
-    \item Built a deployment platform for 16 React microfrontends across 12 public, sovereign, and air-gapped environments, taking deployments from weekly to a peak of 10 a day. Runs active/active inside and outside Azure, surviving a full Azure outage, with URL shareable sideloading of any build from any environment.
-    \item Defined the telemetry standard that 50+ Azure teams build their information architecture around, then built a visualization layer that renders customer engagement metrics beside each auto-instrumented UI component. Used by 1,000+ engineers, product managers, and designers, and daily by Microsoft's C-suite.
-    \item Rearchitected ingestion from Cosmos DB to Azure Data Explorer, replacing a custom 5 resource pipeline with a native Data Share integration and eliminating failure modes, on-call burden, and Azure cost.
-    \item Architected a federated, sandboxed plugin platform for 6 production plugins from 4 organizations, cutting partner onboarding from weeks to a 5 minute configuration change.
-    \item Redesigned CI/CD for a monorepo used by 100+ engineers, using job sharding and build caching to cut build time 79\%, from 120 to 25 minutes, and weekly pipeline time from 400 to 83 hours.
+    \item Built a deployment platform for 16 React microfrontends across 12 public, sovereign, and air-gapped environments, taking releases from one a week to 10 a day at peak. Runs active/active inside and outside Azure, surviving a full cloud outage, with URL shareable sideloading of any build into any environment.
+    \item Defined the telemetry standard 50+ Azure teams use to structure their information architecture, then built a visualization layer rendering customer engagement metrics beside each auto-instrumented UI component. Used by 1K+ engineers, product managers, and designers, and reviewed daily by Microsoft's C-suite.
+    \item Architected a federated, sandboxed plugin platform hosting 6 production plugins built by 4 partner organizations, cutting onboarding from weeks to a 5 minute configuration change.
+    \item Redesigned CI/CD for a monorepo shared by 100+ engineers, applying job sharding and build caching to cut build time by 79\% (120 to 25 minutes) and weekly pipeline time from 400 to 83 hours.
+    \item Rearchitected ingestion from Cosmos DB to Azure Data Explorer, replacing a custom 5 resource pipeline with a native Data Share integration and cutting failure modes, on-call burden, and cloud spend.
 \end{itemize}
 
 \role{Software Engineer II}{December 2021 -- March 2025}
 \begin{itemize}
-    \item Designed and shipped the product's first ASP.NET Core microservice for postmortems, defining RESTful CRUD APIs over Cosmos DB and separating postmortem workflows from incident and root cause domains.
-    \item Led and mentored 5 engineers migrating the platform's most used page (65K DAU) from AngularJS (1.x) to React, cutting load time from 6 to 1.5 seconds and raising monthly internal CSAT from 3.62 to 4.10/5. Generalized the work into React standards, a layered architecture, and automated app and library scaffolding, whose adoption grew from 4 teams to 9, with new engineers contributing on day 1.
-    \item Designed a single sign on token exchange that trades the Microsoft Teams Azure AD token for an internal JWT, letting the embedded Teams app call backend APIs directly and removing a proxy service.
-    \item Directed the Cypress to Playwright migration of 418 end to end tests across 11 applications, 5 teams, and 3 organizations, achieving a 7x speedup and adding accessibility checks that ended quarterly vendor audits.
-    \item Owned frontend delivery for an AI copilot from inception to private preview in 2 months, coordinating every portal page across 6 teams in 4 organizations with no regressions during rollout.
+    \item Led and mentored 5 engineers migrating the platform's most used page (65K DAU) from AngularJS to React, cutting load time from 6 to 1.5 seconds and raising monthly internal CSAT from 3.62 to 4.10 out of 5. Generalized the work into React standards, a layered architecture, and automated scaffolding, mentoring 15 more engineers on 3 other teams as adoption grew from 4 teams to 9.
+    \item Led frontend delivery for an AI copilot as tech lead, from inception to private preview in 2 months, mentoring a junior engineer and integrating it into every portal page across 6 teams in 4 organizations.
+    \item Directed the Cypress to Playwright migration of 418 end to end tests across 11 applications, 5 teams, and 3 organizations for a 7x speedup, adding accessibility checks that replaced quarterly 3rd party audits.
+    \item Designed and shipped the product's first ASP.NET Core microservice on Azure App Service, with RESTful APIs backed by Cosmos DB, separating postmortem workflows from incident and root cause domains.
+    \item Designed a single sign on token exchange that converts the Microsoft Teams Azure AD token into an internal JWT, letting the embedded Teams app call backend APIs directly and removing a proxy service.
 \end{itemize}
 
 \role{Software Engineer I}{February 2020 -- December 2021}
@@ -122,7 +120,7 @@ Senior Software Engineer with 6+ years of experience building distributed system
 
 \experience{Bloomberg L.P.}{New York, NY}{Software Engineer Intern}{May 2019 -- August 2019}
 \begin{itemize}
-    \item Replaced vendor newsletter rendering on Bloomberg.com with a TypeScript microfrontend backed by a Redis and MySQL service serving compiled HTML, JavaScript, and CSS at up to 75,000 requests/second.
+    \item Replaced vendor newsletter rendering on Bloomberg.com with a TypeScript microfrontend backed by a Redis and MySQL service serving compiled HTML, JavaScript, and CSS at up to 75K requests/second.
 \end{itemize}
 
 \header{Skills}
