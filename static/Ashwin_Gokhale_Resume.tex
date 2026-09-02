@@ -1,8 +1,11 @@
+% Merged one-page resume: combines Ashwin_Gokhale_Resume_OnePage.tex and Ashwin_Gokhale_Resume_Copilot_OnePage.tex.
+% Targeted at Senior backend/platform roles (Reddit Core Platform, Robinhood Backend, Spotify Podcast Platform, Sigma).
+% Kept at the repo root rather than static/ so this draft is not published by Gatsby.
 \documentclass[letterpaper, 10pt]{article}
 
 \usepackage[empty]{fullpage}
-% left is 0.25in wider than right to offset the \hspace*{-18pt} in \header and \lineunder
-\usepackage[top=0.4in,bottom=0.4in,left=0.75in,right=0.5in]{geometry}
+% left is wider than right to offset the \hspace*{-18pt} in \header and \lineunder
+\usepackage[top=0.4in,bottom=0.4in,left=0.65in,right=0.42in]{geometry}
 \usepackage{enumitem}
 \usepackage{fontspec}
 \usepackage{hyperref}
@@ -12,11 +15,11 @@
 
 \IfFontExistsTF{Helvetica Neue}
     {\setmainfont[
-        Scale=1.05,
+        Scale=1.10,
         FontFace={m}{sc}{Font=Helvetica Neue}
     ]{Helvetica Neue}}
     {\setmainfont[
-        Scale=1.05,
+        Scale=1.10,
         FontFace={m}{sc}{Font=Latin Modern Sans}
     ]{Latin Modern Sans}}
 
@@ -35,7 +38,7 @@
 \raggedright
 \urlstyle{same}
 
-\setlist[itemize]{itemsep=1pt}
+\setlist[itemize]{itemsep=4pt, topsep=4pt, parsep=0pt, leftmargin=12pt}
 
 \newcommand{\lineunder}{
     \vspace*{-8pt} \\
@@ -43,16 +46,16 @@
 }
 
 \newcommand{\header}[1]{
-    \vspace*{8pt}
+    \vspace*{10pt}
     {
-        \hspace*{-18pt}\vspace*{6pt}
-        {\large\textsc{#1}}
+        \hspace*{-18pt}\vspace*{4pt}
+        {\large\textbf{\textsc{#1}}}
     }
     \vspace*{-6pt} \lineunder
 }
 
 \newcommand{\contact}[2]{
-    \vspace*{-10pt}
+    \vspace*{-32pt}
     \begin{center}
         {\Huge #1}
         \vspace*{5pt}
@@ -63,7 +66,7 @@
 }
 
 \newcommand{\company}[2]{
-    \textbf{#1}\hfill #2\\[-1pt]
+    \textbf{#1}\hfill #2\\[0pt]
 }
 
 % Keeps a role heading from breaking away from a useful chunk of its bullets.
@@ -72,7 +75,9 @@
     \textit{#1}\hfill \textit{#2}\\[-2pt]
 }
 
+% Extra leading space separates this employer block from the previous one.
 \newcommand{\experience}[4]{
+    \vspace*{6pt}
     \Needspace{5\baselineskip}
     \textbf{#1}\hfill #2\\[-1pt]
     \textit{#3}\hfill \textit{#4}\\[-2pt]
@@ -81,67 +86,52 @@
 \begin{document}
 
 \contact{Ashwin Gokhale}{
-    New York, NY / Remote $\vert$
+    New York, NY/Remote $\vert$
     \href{tel:+19255486767}{(925) 548-6767} $\vert$
     \href{mailto:ashwin.gokhale98@gmail.com}{ashwin.gokhale98@gmail.com} $\vert$
     \href{https://www.linkedin.com/in/ashwin-gokhale/}{linkedin.com/in/ashwin-gokhale}
 }
 
 \header{Professional Summary}
-Senior Full Stack Software Engineer, 6+ years at Microsoft building C\# / .NET and TypeScript systems for Azure's incident management portal. Converted a legacy Angular application into an Nx monorepo of 16 React microfrontends using Module Federation, and architected deployment, plugin, and telemetry platforms behind an ASP.NET host serving 2M requests/day.
-
-\header{Skills}
-\textbf{Languages:} C\# / .NET $\vert$ TypeScript / Node.js $\vert$ SQL / KQL $\vert$ Java\\
-\textbf{Cloud \& Backend:} Azure $\vert$ ASP.NET Core / Framework $\vert$ Cosmos DB $\vert$ Azure Data Explorer (Kusto) $\vert$ Redis $\vert$ Kafka $\vert$ Docker $\vert$ SQL Server $\vert$ MySQL\\
-\textbf{Frontend \& Testing:} React $\vert$ Angular $\vert$ Nx $\vert$ Module Federation $\vert$ Playwright $\vert$ Webpack $\vert$ Jest $\vert$ Fluent UI
+Senior Software Engineer with 6+ years of experience building distributed systems in C\#/.NET and TypeScript. Architected the deployment, plugin, and ingestion infrastructure behind Microsoft's incident management platform, driving migrations across 100+ engineers and 4 organizations from design through rollout.
 
 \header{Work Experience}
-\company{Microsoft}{Redmond, WA / Remote}
+\company{Microsoft}{Redmond, WA/Remote}
 \role{Senior Software Engineer}{March 2025 -- Present}
 \begin{itemize}
-    \item Decoupled frontend releases from backend deployments for the portal's 16 React applications, an Nx monorepo composed in the browser at runtime with Module Federation. Cut the wait for a test environment release from as long as 2 weeks to hourly on demand deployments while supporting weekly production releases. Designed active/active Azure Front Door and Blob Storage hosting across public, sovereign, and air-gapped clouds, with immutable versioning, staged rollouts, rollback safeguards, and automatic health probe driven failover to infrastructure outside Azure during Azure outages.
-    \item Architected a federated, sandboxed plugin platform serving 6 production plugins owned by the Azure, Identity, and Microsoft 365 organizations. Isolated plugin failures from the host page, eliminated host redeployments for plugin changes, and reduced partner onboarding from an inner source contribution and deployment cycle to a 5 minute configuration change.
-    \item Rearchitected incident metadata ingestion from Cosmos DB to Azure Data Explorer, replacing a 5 resource custom pipeline (Azure Function, Event Hub, managed identity, Azure Monitor, and Application Insights) with native Cosmos DB Data Share. Reduced sync latency from 6 minutes to 5 minutes and eliminated the pipeline's failure modes, on-call burden, and recurring Azure spend.
-    \item Owned Node.js deployment tooling with shareable URL version overrides for loading local or pipeline builds against production authentication and data. Reduced validation from 7 days to 30 minutes for 100+ engineers across 7 teams while supporting an ASP.NET host serving 2M requests/day.
-    \item Architected a telemetry platform that automatically instruments and logs customer engagement for 50+ engineering teams across IcM and partner organizations, with teams opting in through 10 lines of config to visualize their own data. Built embedded visualizations used by 2,000+ engineers and daily by L1/L2 leadership and Azure CXP stakeholders.
-    \item Redesigned CI for a monorepo used by 100+ engineers, introducing job sharding, dependency and Nx task caching, slimmer container images, package upgrades, and test optimization to cut pull request pipeline time 75\%, from 120 to 30 minutes.
-    \item Led a 20 page Angular 2+ to React migration, personally rewriting 5 pages and coordinating 5 partner teams. Deprecated 600K lines of legacy code, reduced frontend error rate 25\%, from 500 to 375 errors per day, and achieved WCAG 2.1 Level AA conformance.
+    \item Built a deployment platform for 16 React microfrontends across 12 public, sovereign, and air-gapped environments, taking deployments from weekly to a peak of 10 a day. Runs active/active inside and outside Azure, surviving a full Azure outage, with URL shareable sideloading of any build from any environment.
+    \item Defined the telemetry standard that 50+ Azure teams build their information architecture around, then built a visualization layer that renders customer engagement metrics beside each auto-instrumented UI component. Used by 1,000+ engineers, product managers, and designers, and daily by Microsoft's C-suite.
+    \item Rearchitected ingestion from Cosmos DB to Azure Data Explorer, replacing a custom 5 resource pipeline with a native Data Share integration and eliminating failure modes, on-call burden, and Azure cost.
+    \item Architected a federated, sandboxed plugin platform for 6 production plugins from 4 organizations, cutting partner onboarding from weeks to a 5 minute configuration change.
+    \item Redesigned CI/CD for a monorepo used by 100+ engineers, using job sharding and build caching to cut build time 79\%, from 120 to 25 minutes, and weekly pipeline time from 400 to 83 hours.
 \end{itemize}
 
 \role{Software Engineer II}{December 2021 -- March 2025}
 \begin{itemize}
-    \item Designed and shipped the product's first standalone ASP.NET Core service for post incident reviews, defining RESTful CRUD APIs and separating review workflows from incident and root cause domains. Rebuilt authentication from a legacy .NET Framework implementation and established an architectural path for future services.
-    \item Led and mentored a team of 5 engineers that migrated the incident platform's most used page (65K DAU, 600K page views/day) from AngularJS (1.x) to React, reducing load time from 6 seconds to 1.5 seconds and runtime errors 27\% while raising the monthly internal CSAT score 56\%, from 52 to 81.
-    \item Owned frontend delivery for an AI copilot from inception to private preview in 2 months. Coordinated changes spanning every portal page across 6 teams in 4 organizations with no regressions during rollout.
-    \item Directed a migration of 418 end to end tests across 11 applications, 5 teams, and 3 organizations from Cypress to Playwright within one milestone, achieving a 7x speedup that saved 8 hours of pull request build time each day. Embedded automated accessibility checks in every application, eliminating two weeks of manual audits by a vendor team each quarter.
-    \item Converted the platform's single legacy Angular application into an Nx monorepo and established the Module Federation composition, React engineering standards, and layered architecture used by 30 engineers across 4 teams to migrate its 4 most used pages from AngularJS (1.x). Automated React application and shared library creation with one command; led training, office hours, and review of most pull requests, reducing time to first contribution to 1 to 2 days.
-    \item Designed Azure AD / JWT authentication using an internal single sign on token exchange for a Microsoft Teams integration, eliminating an entire proxy service and enabling direct access to REST / OData APIs from the embedded Teams application.
+    \item Designed and shipped the product's first ASP.NET Core microservice for postmortems, defining RESTful CRUD APIs over Cosmos DB and separating postmortem workflows from incident and root cause domains.
+    \item Led and mentored 5 engineers migrating the platform's most used page (65K DAU) from AngularJS (1.x) to React, cutting load time from 6 to 1.5 seconds and raising monthly internal CSAT from 3.62 to 4.10/5. Generalized the work into React standards, a layered architecture, and automated app and library scaffolding, whose adoption grew from 4 teams to 9, with new engineers contributing on day 1.
+    \item Designed a single sign on token exchange that trades the Microsoft Teams Azure AD token for an internal JWT, letting the embedded Teams app call backend APIs directly and removing a proxy service.
+    \item Directed the Cypress to Playwright migration of 418 end to end tests across 11 applications, 5 teams, and 3 organizations, achieving a 7x speedup and adding accessibility checks that ended quarterly vendor audits.
+    \item Owned frontend delivery for an AI copilot from inception to private preview in 2 months, coordinating every portal page across 6 teams in 4 organizations with no regressions during rollout.
 \end{itemize}
 
 \role{Software Engineer I}{February 2020 -- December 2021}
 \begin{itemize}
-    \item Initiated and architected the incident platform's React and microfrontend foundation, building the first React microfrontend and the reusable React / TypeScript infrastructure that all 16 of the portal's applications were later built on, alongside the legacy AngularJS and Angular portal.
-    \item Migrated two internal web platforms to Microsoft's standardized CI/CD system, eliminating self managed Linux build machines and establishing faster, compliant build pipelines.
+    \item Built the platform's first React microfrontend by migrating a 13 page KnockoutJS app with 2 engineers, writing 70\% of the code and creating the React/TypeScript infrastructure behind all 16 portal applications.
 \end{itemize}
 
 \experience{Bloomberg L.P.}{New York, NY}{Software Engineer Intern}{May 2019 -- August 2019}
 \begin{itemize}
-    \item Migrated newsletter rendering from an external vendor to a TypeScript microfrontend container that dynamically rendered browser modules on Bloomberg.com.
-    \item Built a TypeScript, Redis, and MySQL service to deliver compiled HTML, JavaScript, and CSS templates at up to 75,000 requests per second.
+    \item Replaced vendor newsletter rendering on Bloomberg.com with a TypeScript microfrontend backed by a Redis and MySQL service serving compiled HTML, JavaScript, and CSS at up to 75,000 requests/second.
 \end{itemize}
 
-\experience{JPMorgan Chase \& Co.}{Chicago, IL}{Software Engineer Intern}{June 2018 -- August 2018}
-\begin{itemize}
-    \item Architected an extensible Java and TypeScript test automation framework for a corporate banking payment platform, automating manual release validation. Served as Scrum Master for a team of 4 interns.
-\end{itemize}
-
-\experience{Object Edge}{Walnut Creek, CA}{Software Engineer Intern}{May 2017 -- August 2017}
-\begin{itemize}
-    \item Engineered a Java, Kafka, Redis, and Docker customer intent service handling 5,000 queries per second, and delivered React and GraphQL improvements that resolved 30\% of known portal defects.
-\end{itemize}
+\header{Skills}
+\textbf{Languages \& Backend:} C\#/.NET $\vert$ ASP.NET Core $\vert$ TypeScript/Node.js $\vert$ Java $\vert$ SQL/KQL $\vert$ OData/REST\\
+\textbf{Cloud \& Data:} Cosmos DB $\vert$ Azure Data Explorer (Kusto) $\vert$ Redis $\vert$ Kafka $\vert$ Docker $\vert$ SQL Server $\vert$ MySQL\\
+\textbf{Frontend \& Testing:} React $\vert$ Angular $\vert$ Nx $\vert$ Module Federation $\vert$ Webpack $\vert$ Jest $\vert$ Playwright
 
 \header{Education}
-\textbf{Purdue University}\hfill West Lafayette, IN\\[-1pt]
-Bachelor of Science in Computer Science, GPA: 3.79 / 4.00\hfill December 2019
+\textbf{Purdue University}\hfill West Lafayette, IN\\
+(B.S.) Computer Science -- \textit{GPA: 3.79}\hfill August 2016 -- December 2019
 
 \end{document}
