@@ -13,11 +13,11 @@
 
 \IfFontExistsTF{Helvetica Neue}
     {\setmainfont[
-        Scale=1.10,
+        Scale=1.12,
         FontFace={m}{sc}{Font=Helvetica Neue}
     ]{Helvetica Neue}}
     {\setmainfont[
-        Scale=1.10,
+        Scale=1.12,
         FontFace={m}{sc}{Font=Latin Modern Sans}
     ]{Latin Modern Sans}}
 
@@ -91,16 +91,16 @@
 }
 
 \header{Professional Summary}
-Senior Software Engineer with 6+ years of experience building distributed systems in C\#/.NET and TypeScript. Architected the deployment, plugin, telemetry, and ingestion infrastructure for Microsoft's incident management platform, driving migrations for 100+ engineers across 4 organizations from design to rollout.
+Senior Software Engineer with 6+ years of experience building distributed systems in C\#/.NET and TypeScript. Architected the deployment, plugin, telemetry, and ingestion infrastructure for Microsoft's incident management platform, driving migrations for 100+ engineers across 4 organizations.
 
 \header{Work Experience}
 \company{Microsoft}{Redmond, WA/Remote}
 \role{Senior Software Engineer}{March 2025 -- Present}
 \begin{itemize}
     \item Architected a deployment platform for 16 React microfrontends across 12 public, sovereign, and air-gapped environments, taking releases from 1/week to 10/day. Runs active/active inside and outside Azure with 0 downtime auto-failover, plus URL shareable sideloading of any build to any environment.
-    \item Defined the telemetry standard 50+ Azure teams use to structure their information architecture, then built a visualization layer rendering customer engagement metrics beside each auto-instrumented UI component. Used by 1K+ engineers, product managers, and designers, and reviewed daily by Microsoft's C-suite.
+    \item Shipped a React framework standardizing components, telemetry, and information architecture across 40+ Azure products, then built a visualization layer showing customer engagement metrics beside each auto-instrumented component. Used daily by 1K+ engineers, PMs, designers, and Microsoft's C-suite.
     \item Built a federated, sandboxed plugin platform with automatic monitoring instrumentation, hosting 6 production plugins built by 4 partner organizations and cutting onboarding from weeks to 5 minutes.
-    \item Redesigned CI/CD for a monorepo shared by 100+ engineers, applying job sharding and build caching to cut build time by 79\% (120 to 25 minutes) and weekly pipeline time from 400 to 83 hours.
+    \item Redesigned CI/CD for a monorepo shared by 100+ engineers, applying job sharding and distributed caching to cut build time by 79\% (120 to 25 minutes) and weekly pipeline time from 400 to 83 hours.
     \item Rearchitected ingestion from Cosmos DB to Azure Data Explorer, replacing a custom 5 resource pipeline with a native Data Share integration and cutting failure modes, on-call burden, and cloud spend.
 \end{itemize}
 
