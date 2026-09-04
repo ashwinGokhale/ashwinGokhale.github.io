@@ -13,11 +13,11 @@
 
 \IfFontExistsTF{Helvetica Neue}
     {\setmainfont[
-        Scale=1.12,
+        Scale=1.125,
         FontFace={m}{sc}{Font=Helvetica Neue}
     ]{Helvetica Neue}}
     {\setmainfont[
-        Scale=1.12,
+        Scale=1.125,
         FontFace={m}{sc}{Font=Latin Modern Sans}
     ]{Latin Modern Sans}}
 
@@ -36,7 +36,7 @@
 \raggedright
 \urlstyle{same}
 
-\setlist[itemize]{itemsep=6pt, topsep=4pt, parsep=0pt, leftmargin=12pt}
+\setlist[itemize]{itemsep=6pt, topsep=2pt, parsep=0pt, leftmargin=12pt}
 
 \newcommand{\lineunder}{
     \vspace*{-8pt} \\
@@ -97,34 +97,35 @@ Senior Software Engineer with 6+ years building distributed systems and platform
 \company{Microsoft}{Redmond, WA/Remote}
 \role{Senior Software Engineer}{March 2025 -- Present}
 \begin{itemize}
-    \item Architected the platform for serving and deploying 16 React microfrontends across 12 public, sovereign, and air-gapped clouds, scaling releases from 1/week to 10/day. Runs active/active on and off Azure with zero downtime automatic disaster recovery, and shareable URLs that load any build into any environment.
-    \item Shipped a React framework standardizing UI, telemetry, and information architecture across 40+ Azure products, then led 2 engineers to build a visualization layer showing engagement metrics beside each auto-instrumented component. Used daily by 1K+ engineers, PMs, designers, and Microsoft's C-suite.
-    \item Built a sandboxed plugin system on React, ASP.NET, and SQL Server that lets 4 partner organizations host and deploy 6 production plugins independently, cutting onboarding from weeks to 5 minutes.
-    \item Redesigned data ingestion from Cosmos DB to Azure Data Explorer, replacing a custom 5 resource pipeline with a native Data Share integration and cutting failure modes, on-call burden, and cloud spend.
-    \item Owned the Nx monorepo, Module Federation model, and CI/CD used by 100+ engineers, applying job sharding and caching to cut build time 79\% (120 to 25 minutes) and pipeline time 400 to 83 hours/week.
+    \item Reduced partner onboarding time from 3 weeks to 1 hour with a sandboxed plugin system on React, ASP.NET, and SQL Server that lets 4 organizations deploy and host 6 production plugins independently.
+    \item Cut ingestion P99 latency from 5s to 1s by replacing a custom 5 resource pipeline with native Data Share, now 18 months at 100\% uptime moving 1M documents/day from Cosmos DB to Azure Data Explorer.
+    \item Scaled releases from 1/week to 10/day by creating a platform that hosts and deploys 16 apps in 12 public, sovereign, and air-gapped clouds, active/active with zero downtime failover on and off Azure.
+    \item Standardized how 40+ Azure products measure engagement by unifying UI, telemetry, and information architecture, then led 2 engineers to visualize those metrics in-app beside the components they measure. Used daily by 1K+ engineers, PMs, designers, and Microsoft's C-suite.
+    \item Reclaimed 317 pipeline hours/week for 100+ engineers by adding job sharding and task caching to CI for the Nx monorepo and its Module Federation model, a 79\% build time drop from 120 to 25 minutes.
 \end{itemize}
 
 \role{Software Engineer II}{December 2021 -- March 2025}
 \begin{itemize}
-    \item Introduced the product's first ASP.NET Core microservice, decoupling the incident and postmortem domains and rewriting the shared libraries that let 10 more of the team's services migrate to .NET.
-    \item Led and mentored 5 engineers migrating the platform's most used page (65K DAU) to React, cutting load time from 6 to 1.5 seconds and raising monthly internal CSAT from 3.62 to 4.10 out of 5. Generalized the work into standards and scaffolding, mentoring 15 more engineers as adoption grew from 4 teams to 9.
-    \item Directed 2 engineers on an AI copilot that embeds agentic incident management tools directly in the portal for on-call engineers. Reached private preview in 2 months and now serves 18K MAU.
+    \item Started the team's .NET migration with its first ASP.NET Core microservice, decoupling incident and postmortem domains and serving 60K requests/day. Rewrote the shared libraries for 10 more services.
+    \item Shipped an AI copilot to private preview in 2 months, now at 18K MAU, by directing 2 engineers and 6 teams across 4 organizations to bring agentic incident workflows directly into the product's portal.
+    \item Cut load time from 6 to 1.5 seconds and increased monthly CSAT score from 3.62/5 to 4.10/5 by leading 5 engineers to move the platform's most used page (65K DAU) from Angular to React. Turned the migration into standards and scaffolding that grew from 4 teams to 9, mentoring 15 engineers.
+    \item Saved 8 hours of PR build time/day and 2 weeks of manual audits/quarter by moving 418 E2E tests from Cypress to Playwright, adding WCAG 2.1 AA checks across 11 apps, 5 teams, and 3 organizations.
 \end{itemize}
 
 \role{Software Engineer I}{February 2020 -- December 2021}
 \begin{itemize}
-    \item Eliminated a proxy service with a single sign on token exchange that converts the Microsoft Teams Azure AD token into an internal JWT, letting the embedded Teams app call backend APIs directly.
-    \item Launched the platform's first React microfrontend by migrating a 13 page KnockoutJS app with 2 engineers, writing 70\% of the code and creating the infrastructure behind all 16 portal applications.
+    \item Removed a proxy service from the request path with a single sign on exchange that trades the Microsoft Teams Azure AD token for an internal JWT, so the embedded app calls backend APIs directly.
+    \item Established the foundation all 16 portal apps now run on by shipping the platform's first React microfrontend, rebuilding a 13 page KnockoutJS app and writing 70\% of it alongside 2 engineers.
 \end{itemize}
 
 \experience{Bloomberg L.P.}{New York, NY}{Software Engineer Intern}{May 2019 -- August 2019}
 \begin{itemize}
-    \item Replaced vendor newsletter rendering on Bloomberg.com with a TypeScript microfrontend backed by a Redis and MySQL service serving compiled HTML, JavaScript, and CSS at up to 75K requests/second.
+    \item Served 75K requests/second of compiled HTML, JavaScript, and CSS templates by replacing vendor newsletter rendering on bloomberg.com with a TypeScript microservice backed by Redis and MySQL.
 \end{itemize}
 
 \experience{Object Edge}{Walnut Creek, CA}{Software Engineer Intern}{May 2017 -- August 2017}
 \begin{itemize}
-    \item Developed a realtime customer intent microservice on Java, Kafka, Redis, and Docker serving 5K requests/second, improving product recommendations.
+    \item Powered product recommendations with a realtime customer intent microservice handling 5K requests/second on Java, Kafka, Redis, and Docker.
 \end{itemize}
 
 
