@@ -36,7 +36,7 @@
 \raggedright
 \urlstyle{same}
 
-\setlist[itemize]{itemsep=6pt, topsep=2pt, parsep=0pt, leftmargin=12pt}
+\setlist[itemize]{itemsep=5pt, topsep=2pt, parsep=0pt, leftmargin=12pt}
 
 \newcommand{\lineunder}{
     \vspace*{-8pt} \\
@@ -75,7 +75,7 @@
 
 % Extra leading space separates this employer block from the previous one.
 \newcommand{\experience}[4]{
-    \vspace*{5pt}
+    \vspace*{8pt}
     \Needspace{5\baselineskip}
     \textbf{#1}\hfill #2\\[-1pt]
     \textit{#3}\hfill \textit{#4}\\[-2pt]
@@ -90,7 +90,8 @@
     \href{https://www.linkedin.com/in/ashwin-gokhale/}{linkedin.com/in/ashwin-gokhale}
 }
 
-\header{Professional Summary}
+\vspace*{-4pt}
+\hspace*{-18pt}\hrulefill\\[3pt]
 Senior Software Engineer with 6+ years building distributed systems and platform infrastructure. Owner of developer experience for the 100+ engineers building Microsoft's incident management product.
 
 \header{Work Experience}
@@ -99,11 +100,13 @@ Senior Software Engineer with 6+ years building distributed systems and platform
 \begin{itemize}
     \item Reduced partner onboarding time from 3 weeks to 1 hour with a sandboxed plugin system on React, ASP.NET, and SQL Server that lets 4 organizations deploy and host 6 production plugins independently.
     \item Cut ingestion P99 latency from 5s to 1s by replacing a custom 5 resource pipeline with native Data Share, now 18 months at 100\% uptime moving 1M documents/day from Cosmos DB to Azure Data Explorer.
-    \item Scaled releases from 1/week to 10/day by creating a platform that hosts and deploys 16 apps in 12 public, sovereign, and air-gapped clouds, active/active with zero downtime failover on and off Azure.
+    \item Corrected incident response metrics product wide (time to detect, engage, mitigate) by replacing manual data entry with 50K automatic postmortem updates/day from 200K Kafka events/hour at 4s P99 lag.
+    \item Scaled releases from 1/week to 10/day by creating a platform that hosts and deploys 16 React apps in 12 public, sovereign, and air-gapped clouds, active/active with zero downtime failover on and off Azure.
     \item Standardized how 40+ Azure products measure engagement by unifying UI, telemetry, and information architecture, then led 2 engineers to visualize those metrics in-app beside the components they measure. Used daily by 1K+ engineers, PMs, designers, and Microsoft's C-suite.
     \item Reclaimed 317 pipeline hours/week for 100+ engineers by adding job sharding and task caching to CI for the Nx monorepo and its Module Federation model, a 79\% build time drop from 120 to 25 minutes.
 \end{itemize}
 
+\vspace*{6pt}
 \role{Software Engineer II}{December 2021 -- March 2025}
 \begin{itemize}
     \item Started the team's .NET migration with its first ASP.NET Core microservice, decoupling incident and postmortem domains and serving 60K requests/day. Rewrote the shared libraries for 10 more services.
@@ -112,9 +115,9 @@ Senior Software Engineer with 6+ years building distributed systems and platform
     \item Saved 8 hours of PR build time/day and 2 weeks of manual audits/quarter by moving 418 E2E tests from Cypress to Playwright, adding WCAG 2.1 AA checks across 11 apps, 5 teams, and 3 organizations.
 \end{itemize}
 
+\vspace*{6pt}
 \role{Software Engineer I}{February 2020 -- December 2021}
 \begin{itemize}
-    \item Removed a proxy service from the request path with a single sign on exchange that trades the Microsoft Teams Azure AD token for an internal JWT, so the embedded app calls backend APIs directly.
     \item Established the foundation all 16 portal apps now run on by shipping the platform's first React microfrontend, rebuilding a 13 page KnockoutJS app and writing 70\% of it alongside 2 engineers.
 \end{itemize}
 
