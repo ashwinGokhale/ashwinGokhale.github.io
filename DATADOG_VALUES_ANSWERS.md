@@ -202,6 +202,22 @@ Recruiter's question: _tell me about a time you disagreed with your coworkers._
 
 Recruiter's question: _time when you had to collaborate with a lot of different teams. what were some of the challenges, how did you overcome them_
 
+**Headline:** Led five engineers moving our most used page, about 65,000 daily users, from AngularJS to React, and created the migration standards and scaffolding other teams used to move their own pages. Adoption grew from 4 teams to 9, and I mentored 15 engineers. The page's load time fell from 6 seconds to 1.5, and monthly satisfaction rose from 3.62 to 4.10 out of 5.
+
+> **S - Situation:** Our incident details page is the most used page in our product, with about 65,000 daily users, and it was built in AngularJS. Other teams owned other parts of the product, and they needed to move to React too. [Most of their engineers had never used React.]
+>
+> **T - Task:** I led five engineers on the details page. I also had to get other teams moving their own pages the same way, and none of them reported to me.
+>
+> **A - Action:** We moved the page one piece at a time instead of rewriting it all at once. The parts on screen moved to React first and loaded straight into the old AngularJS page, and workflows like mitigating an incident moved over later. For the other teams, I made the move cheap. I wrote migration standards and starter scaffolding, so a team could start a React page without setting everything up from scratch. I ran training, wrote docs, and held regular support sessions open to every team. [I also rewrote five pages myself and coordinated with five other teams as they moved theirs.] My biggest mistake was timing. I got the training ready too late, so for a while I was juggling onboarding, my own feature work, and on-call. [After that, I had training and docs ready before each team started.]
+>
+> **R - Result:** Engineers on newly onboarded teams were contributing within a day or two. Use of the standards grew from four teams to nine, and I mentored 15 engineers along the way. Once the last workflows moved to React, the details page's load time dropped from six seconds to 1.5, and monthly satisfaction went from 3.62 to 4.10 out of 5. [Across the migration, we removed about 700,000 lines of old code, frontend incidents dropped 25%, and accessibility incidents dropped 75%.]
+>
+> **L - Learning:** Teams I don't manage adopt a change when it's cheaper than not adopting it. Standards, starter code, and hands-on help did more than any mandate could. And that help has to be ready before teams need it, not after they've started. At Datadog, where many teams build on shared platforms, I'd plan that support as part of the work from day one.
+
+If you already told module federation (Q7 backup), skip how the pieces load into the old page and spend the time on the other teams.
+
+**Backup if they want another cross-team story, across organizations:**
+
 **Headline:** Moved 418 end-to-end tests from Cypress to Playwright across 11 apps, five teams, and three organizations within the milestone. Tests ran about seven times faster, saving about eight build hours a day and two weeks of manual accessibility audits a quarter.
 
 > **S - Situation:** I led moving 418 end-to-end tests from Cypress to Playwright, across 11 apps owned by five teams in three organizations. We wanted faster tests, automatic accessibility checks, and one consistent test setup.
@@ -253,7 +269,7 @@ About a minute, no story needed.
 - **"How do you estimate? Tell me about an estimate that was wrong."** Use the SRE dependency (Q4). My biggest miss was the release system. The plan depended on another team's capacity, and when their staffing fell through, we were months late. An estimate that depends on another team is only as good as their commitment, so I get that commitment at kickoff and track it like my own work. On the Copilot integration, I scoped and estimated the work up front, and we reached private preview in two months.
 - **"How do you balance features against tech debt or reliability work?"** Whatever is blocking users or other teams goes first. Otherwise, I make the case for the work in terms users and engineers feel, and fit it into planning. The Playwright move saved about eight hours of build time a day and two weeks of manual audits a quarter, which made it easy to justify. After the August incident, I led the release redesign, because a bad release that reaches everyone costs more than fixing the process.
 - **"How do you know a project is on track?"** I don't rely on status alone. I set checkpoints where something has to work, and I look at those. On telemetry, the first milestone is what showed me my approach wasn't working, while there was still time to fix it. On the Copilot integration, the weekly demos did the same job for stakeholders.
-- **"How do you run a project across several teams?"** Use Cypress to Playwright (Q9). I make the work cheap for them: a detailed guide, a meeting with each team about their apps, and doing some of the migration and reviews myself. And I get it into their plans before planning closes, which I learned the hard way on that project.
+- **"How do you run a project across several teams?"** Use the AngularJS to React migration (Q9), or Cypress to Playwright (Q9 backup). I make the work cheap for teams I don't manage: standards and starter code, training and docs, regular support sessions, and doing some of the work myself. And I get it into their plans, with the support ready, before they start. I learned both the hard way: on the React migration my training came too late, and on Playwright I asked after planning had closed.
 
 ## Unclear requirements
 
@@ -380,7 +396,10 @@ Every lesson from the Experience and Values answers, by story. Each one is state
 - **When requirements are unclear, pin down what users can't lose, then prototype to get facts.** (Azure Portal evaluation, unclear requirements)
     - **How I grew:** I didn't wait for someone to define the requirements. I wrote down what our users couldn't give up, built a prototype to answer the open questions, and turned the answer into a decision tree other teams could reuse.
     - **At Datadog:** I'd handle an open-ended problem the same way: pin down what customers can't lose, build the smallest version that gets real facts, and leave behind something the next team can use.
-- **Other teams plan their time in advance.** (Cypress to Playwright, Q9)
+- **Teams I don't manage adopt a change when it's cheaper than not adopting it.** (AngularJS to React migration, Q9)
+    - **How I grew:** Standards, starter code, training, and hands-on help did more than any mandate could. I got the training ready too late at first and ended up juggling onboarding, feature work, and on-call. Now I have support ready before teams need it.
+    - **At Datadog:** Many teams build on shared platforms, so I'd plan enablement as part of the work from day one, not after teams start struggling.
+- **Other teams plan their time in advance.** (Cypress to Playwright, Q9 backup)
     - **How I grew:** Even a clearly good change costs other teams time. [Now I get cross-team work into other teams' plans before planning closes.] And I make it cheap to do with guides and hands-on help.
     - **At Datadog:** I'd line up cross-team work at planning time, not after.
 - **Match support to the person and the deadline.** (Mentoring and the telemetry project, Q10)

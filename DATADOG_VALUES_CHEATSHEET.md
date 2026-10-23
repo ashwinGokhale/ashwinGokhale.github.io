@@ -31,7 +31,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 | 8   | Disagreement with a coworker       | FAST disagreement                                      | Not on resume (the 40+ is in Senior "Standardized how 40+")                                                                                   |
 | 8b  | Backup: pushing back on leadership | Azure Portal evaluation                                | Not on resume                                                                                                                                 |
 | -   | Unclear requirements               | Azure Portal evaluation, told for ambiguity            | Not on resume                                                                                                                                 |
-| 9   | Working across many teams          | Cypress to Playwright                                  | SWE II "Saved 8 hours of PR build time"                                                                                                       |
+| 9   | Working across many teams          | Voyager: most used page, AngularJS to React            | SWE II "Cut load time" (65K, 5 engineers, 4 teams to 9, 15 engineers)                                                                         |
+| 9b  | Backup: across organizations       | Cypress to Playwright                                  | SWE II "Saved 8 hours of PR build time"                                                                                                       |
 | 10  | Mentoring                          | Blocked mentee                                         | Not on resume                                                                                                                                 |
 
 ## Not on your resume: memorize these
@@ -49,7 +50,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 - **Search (planning questions):** PMs and my manager prioritized it over my performance push. Ctrl+F can't find text on closed tabs. I made my case, then committed.
 - **FAST (Q8):** kept navigation and the service and team pickers. Both of us presented to both managers and my skip manager.
 - **Azure Portal evaluation (Q8b):** first load about 1 second to 9. Their team of about 60 vs our five part-time maintainers. Couldn't keep working during an Azure outage. Decision tree for our org and three partner orgs.
-- **Playwright (Q9):** about 7x faster.
+- **Voyager (Q9):** piece by piece, on-screen parts first. Standards, starter scaffolding, training, docs, support sessions for every team. Training ready too late. New teams contributing in a day or two.
+- **Playwright (Q9b):** about 7x faster.
 - **Mentee (Q10):** speed roughly doubled, 3 features in 2 months.
 
 ## Q1. Career story
@@ -267,7 +269,7 @@ Learn this table first. If you know the story for each question, the rest comes 
 | An estimate that was wrong                    | SRE: an estimate is only as good as the other team's commitment                               |
 | Features vs tech debt or reliability          | Blockers first. Playwright savings. Release redesign after the incident                       |
 | Knowing it's on track                         | Checkpoints where something has to work. Telemetry's first milestone showed the problem       |
-| Running work across several teams             | Playwright (Q9): make it cheap, get into their plans early                                    |
+| Running work across several teams             | Voyager (Q9): standards, scaffolding, training ready early. Or Playwright (Q9b)               |
 
 ## Unclear requirements
 
@@ -338,6 +340,28 @@ Learn this table first. If you know the story for each question, the rest comes 
 **Trade-off:** Asking the Portal team to build outage support was too much work to justify the move.
 
 ## Q9. Working across many teams
+
+**Story:** Voyager: our most used page, AngularJS to React, plus other teams' pages
+
+**Resume:** SWE II "Cut load time" (6 to 1.5, 3.62 to 4.10, 5 engineers, 65K, 4 teams to 9, 15 engineers). Training timing, support sessions, and the day-or-two onboarding are not on it.
+
+**Headline:** Led five engineers moving our most used page, about 65,000 daily users, from AngularJS to React, and created the migration standards and scaffolding other teams used to move their own pages. Adoption grew from 4 teams to 9, and I mentored 15 engineers. The page's load time fell from 6 seconds to 1.5, and monthly satisfaction rose from 3.62 to 4.10 out of 5.
+
+**Open with:** "Our incident details page is the most used page in our product, with about 65,000 daily users, and it was built in AngularJS."
+
+**Cue:** 65K daily, AngularJS / my 5 engineers plus teams I don't manage / piece by piece / standards, scaffolding, training / training too late / 4 teams to 9, 6 to 1.5 / cheaper to adopt than not
+
+- **S:** Most used page, 65K daily users, AngularJS. Other teams had to move to React too. [Most had never used React.]
+- **T:** Led 5 engineers on the details page. Get other teams moving their own pages the same way. None reported to me.
+- **A:** One piece at a time: on-screen parts to React first, loaded into the old page. Workflows like mitigating later. Migration standards and starter scaffolding. Training, docs, regular support sessions for every team. [Rewrote 5 pages myself, coordinated 5 other teams.] Mistake: training ready too late, juggling onboarding, features, and on-call. [Then: training and docs ready before each team started.]
+- **R:** New teams contributing within a day or two. Standards 4 teams to 9. Mentored 15 engineers. Load 6 to 1.5 seconds, satisfaction 3.62 to 4.10. [About 700,000 lines removed, frontend incidents down 25%, accessibility incidents down 75%.]
+- **L:** Teams I don't manage adopt a change when it's cheaper than not. Standards, starter code, hands-on help beat a mandate. Have support ready before teams need it. At Datadog: plan enablement as part of the work.
+
+**Trade-off:** Moved piece by piece instead of a full rewrite. Users got improvements sooner, but the page loaded both frameworks, about 6 seconds, until the last workflows moved.
+
+**If you already told module federation (Q7b):** skip how the pieces load into the old page. Spend the time on the other teams.
+
+### Q9 backup. Cypress to Playwright
 
 **Story:** Cypress to Playwright
 

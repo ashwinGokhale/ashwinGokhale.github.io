@@ -298,7 +298,10 @@ Every lesson from the Experience and Values answers, by story. Each one is state
 - **When requirements are unclear, pin down what users can't lose, then prototype to get facts.** (Azure Portal evaluation, unclear requirements)
     - **How I grew:** I didn't wait for someone to define the requirements. I wrote down what our users couldn't give up, built a prototype to answer the open questions, and turned the answer into a decision tree other teams could reuse.
     - **At Datadog:** I'd handle an open-ended problem the same way: pin down what customers can't lose, build the smallest version that gets real facts, and leave behind something the next team can use.
-- **Other teams plan their time in advance.** (Cypress to Playwright, Q9)
+- **Teams I don't manage adopt a change when it's cheaper than not adopting it.** (AngularJS to React migration, Q9)
+    - **How I grew:** Standards, starter code, training, and hands-on help did more than any mandate could. I got the training ready too late at first and ended up juggling onboarding, feature work, and on-call. Now I have support ready before teams need it.
+    - **At Datadog:** Many teams build on shared platforms, so I'd plan enablement as part of the work from day one, not after teams start struggling.
+- **Other teams plan their time in advance.** (Cypress to Playwright, Q9 backup)
     - **How I grew:** Even a clearly good change costs other teams time. [Now I get cross-team work into other teams' plans before planning closes.] And I make it cheap to do with guides and hands-on help.
     - **At Datadog:** I'd line up cross-team work at planning time, not after.
 - **Match support to the person and the deadline.** (Mentoring and the telemetry project, Q10)
