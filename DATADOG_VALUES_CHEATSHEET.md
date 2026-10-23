@@ -58,6 +58,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 
 **Resume:** walk it top to bottom: summary, SWE I, SWE II, Senior. Bloomberg for the 75K.
 
+**Headline:** Backend internships at Object Edge and Bloomberg, then 6+ years at Microsoft, growing from our platform's first React app to owning the shared platform 100+ engineers ship on. Took releases from once a week to ten a day.
+
 **Open with:** "My career has been about building things other engineers depend on."
 
 **Cue:** internships to first React app / shared pieces / 100+ engineers / prototype first, then Datadog
@@ -101,6 +103,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 
 **Resume:** the scope list is your Senior bullets: "Reclaimed 317" (build), "Scaled releases" (16 apps, 12 clouds), "Corrected incident response" (Kafka), "Reduced partner onboarding" (plugins). 15 engineers is in SWE II "Cut load time". The SRE story is not on it.
 
+**Headline:** Own the shared repo, build pipeline, and release system for 100+ engineers, plus backend pipelines for incident data. Mentored 15 engineers. Plan by milestones with outside dependencies named at kickoff.
+
 **Open with:** "I own the platform more than 100 engineers build on: the shared repo, its build pipeline, and our web app's release system."
 
 **Cue:** scope / blockers first / SRE side / my risk / escalated, built it / months late / name dependencies at kickoff
@@ -128,6 +132,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 
 **Resume:** SWE II "Started the team's .NET migration" (60K, 10 more). Working group and auth library are not on it.
 
+**Headline:** Started our team's move to .NET by proposing and building its first ASP.NET Core service, for postmortems. Ran the design working group and rewrote the shared libraries, including auth. The service grew to 60K requests a day, and ten more services moved over on that shared code.
+
 **Open with:** "I proposed splitting postmortems out of our incident system into their own service, and I built it as our team's first ASP.NET Core service."
 
 **Cue:** tangled / first on new stack / working group / 60K and ten services / real examples
@@ -146,6 +152,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 
 **Resume:** SWE II "Shipped an AI copilot" (2 months, 18K, 2 engineers, 6 teams, 4 organizations).
 
+**Headline:** Took an AI Copilot's portal integration to private preview in two months with no reported regressions, leading two junior engineers and coordinating six teams in four organizations. The product later reached 18K monthly users.
+
 **Cue:** every page, six teams / portal only / reuse and coordinate / two months / [owners test early]
 
 - **S:** AI Copilot side panel on every page changed layouts owned by six teams in four organizations.
@@ -159,6 +167,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 **Story:** Fallback folder
 
 **Resume:** not on it. Senior "Scaled releases" is the system it belongs to.
+
+**Headline:** Designed a fallback folder that every release overwrote while users could be loading from it. I replaced it with routing to exact versions, kept the partner URL working, and led a redesign where uploading a build never changes what users see.
 
 **Open with:** "I designed an emergency fallback folder for our release system, and it broke the safety rule the system was supposed to follow."
 
@@ -178,6 +188,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 
 **Resume:** not on it, including the 5%. Senior "Scaled releases" is the system it belongs to.
 
+**Headline:** Designed our shell to fetch its app version list after loading, which let an old shell load new app code during a rollout. Moved the version list into the shell's HTML so every page gets matching versions, removing a network request and a file on disk, and making first load 5% faster.
+
 **Cue:** late version fetch / my design / embed in HTML / 5% faster / must match
 
 - **S:** Shell (main page that loads every app) fetched a separate version file after loading. Mismatched code could run together.
@@ -192,6 +204,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 
 **Resume:** not on it. Same repo as Senior "Reclaimed 317" (Nx monorepo).
 
+**Headline:** Rolled out large shared-repo changes without enough notice and cost other engineers time. Proposed a process for large shared changes: merge windows, environment updates coordinated ahead of time, and batching.
+
 **Cue:** too little notice / my disruption / merge windows / [next upgrade] / done means adopted
 
 - **S:** 2023: large shared-repo changes without enough notice. Cost engineers time while they were shipping.
@@ -205,6 +219,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 **Story:** Telemetry visualization: what to build, in what order, who builds it
 
 **Resume:** Senior "Standardized how 40+ Azure products" (Led 2 engineers, 1K+ daily, C-suite). The scoping and order are not on it.
+
+**Headline:** Led two junior engineers to show engagement metrics inside the app for a framework 40+ Azure products use. Decided what made the first version, in what order, and who built each piece. Shipped the MVP on time, and it's now used daily by 1K+ engineers, PMs, designers, and Microsoft's C-suite.
 
 **Open with:** "I own a shared framework that more than 40 Azure products use to measure how people use their pages."
 
@@ -223,6 +239,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 **Story:** Module federation
 
 **Resume:** SWE II "Cut load time" (6 to 1.5, 3.62 to 4.10, 5 engineers, 65K, 4 teams to 9). Module federation is not on it.
+
+**Headline:** Bet early on module federation, prototyped it on my own, and made it the team's way to move off AngularJS. My migration standards spread from 4 teams to 9, and it became the foundation for rebuilding our most used page, where load time fell from 6 seconds to 1.5 and monthly satisfaction rose from 3.62 to 4.10 out of 5.
 
 **Cue:** slow iframes / on my own / prototype and demo / 4 teams to 9, 6 to 1.5 / show it working
 
@@ -259,7 +277,7 @@ Learn this table first. If you know the story for each question, the rest comes 
 
 **If they've already heard it:** "This is the Azure Portal evaluation I mentioned." Then spend the time on how you turned an open question into requirements, a prototype, and a decision.
 
-**Headline:** Turned an open-ended ask from senior leadership into clear requirements, a working prototype, and a side-by-side list of trade-offs. First load 1 second to 9, no outage support, recommended against, decision tree for our org and three partner orgs.
+**Headline:** Turned an open-ended ask from senior leadership into clear requirements, a working prototype, and a side-by-side list of trade-offs. Found first page load went from 1 second to 9 and the framework couldn't keep working during an Azure outage, recommended against the move, and turned the findings into a decision tree for our org and three partner orgs.
 
 **Open with:** "Senior leadership asked me to evaluate moving our whole portal onto the Azure Portal framework. The ask was just 'evaluate it.'"
 
@@ -287,6 +305,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 
 **Resume:** not on it. The 40+ is in Senior "Standardized how 40+ Azure products".
 
+**Headline:** Disagreed with a coworker about adding FAST to a shared framework used by 40+ teams. We presented both cases to our managers, who decided not to expand FAST. We kept what already depended on it instead of paying for a rewrite, and he later joined my team.
+
 **Open with:** "I disagreed with a coworker who wanted to build shared UI components in Microsoft FAST for Elixir, the framework more than 40 Azure product teams use."
 
 **Cue:** FAST for Elixir / make the cost clear / managers decide / keep, stop adding / add vs replace
@@ -305,6 +325,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 
 **Resume:** not on it. Memorize 1 second to 9, and about 60 vs five part-time.
 
+**Headline:** Tested leadership's proposal to move our portal onto the Azure Portal framework. First page load went from 1 second to 9, and it couldn't keep working during an Azure outage. Recommended against it and built a decision tree for our org and three partner orgs.
+
 **Cue:** leadership's proposal / own the call / fair test / recommend against / cost users feel
 
 - **S:** Senior leadership asked me to evaluate moving our whole portal onto the Azure Portal framework.
@@ -320,6 +342,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 **Story:** Cypress to Playwright
 
 **Resume:** SWE II "Saved 8 hours of PR build time" (418 tests, 11 apps, 5 teams, 3 organizations, 2 weeks of audits). "About 7x faster" is not on it.
+
+**Headline:** Moved 418 end-to-end tests from Cypress to Playwright across 11 apps, five teams, and three organizations within the milestone. Tests ran about seven times faster, saving about eight build hours a day and two weeks of manual accessibility audits a quarter.
 
 **Open with:** "I led moving 418 end-to-end tests from Cypress to Playwright, across 11 apps owned by five teams in three organizations."
 
@@ -338,6 +362,8 @@ Learn this table first. If you know the story for each question, the rest comes 
 **Story:** Blocked mentee
 
 **Resume:** the mentee is not on it. The two telemetry juniors are "Led 2 engineers" in Senior "Standardized how 40+ Azure products".
+
+**Headline:** Coached my most recent mentee, an engineer who kept getting blocked, with one-on-one training and direct feedback on every PR. She roughly doubled her development speed and shipped three features in two months. Applied what I learned from giving two juniors too much room on a tight telemetry deadline.
 
 **Open with:** "The mentoring I'm proudest of is my most recent, with an engineer who kept getting blocked."
 
